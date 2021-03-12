@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="css/liststyles.css">
+  </head>
+  <body>   
+    <br><br>
+    <a href="http://localhost:3000"> Main Page</a>
+      
+    <header>
+      <h1>List of all comments </h1>
+    </header>
+
+<table class="table">
+  <thead class ="thead-dark">
+              <th scope="col">Course Code</th>
+              <th scope="col">Course Name</th>
+              <th scope="col">Semester</th>
+              <th scope="col">Comment</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <p><%=data.email %></p>
+            <% for(var i=0; i < data.length; i++) { %>
+            <tr>
+              <td><%= data[i].coursecode %></td>
+              <td><%= data[i].coursename %></td>
+              <td><%= data[i].semester %></td>
+              <td><%= data[i].comment %></td>
+              <td><%= data[i].date.toDateString() %></td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
